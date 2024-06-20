@@ -1,6 +1,6 @@
 require "sinatra"
-require "sinatra/reloader"
-require 'pry'
+require "sinatra/reloader" if development?
+require 'pry' if development?
 
 helpers do
   def in_paragraphs(text)
